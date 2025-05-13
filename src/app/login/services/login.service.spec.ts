@@ -10,7 +10,23 @@ describe('LoginService', () => {
     service = TestBed.inject(LoginService);
   });
 
-  it('should be created', () => {
+  it('Debe Crearse el Servicio', () => {
     expect(service).toBeTruthy();
   });
+
+  it('Debe realizar el login correctamente', () => {
+    const mockUser = {
+      username: 'user@demo.com',
+      password: '123456'
+    };
+
+    const result = service.login(mockUser.username, mockUser.password);
+    expect(result).toBeTruthy();
+  });
+
+  it('Debe realizar el logout correctamente', () => {
+    const result = service.logout();
+    expect(result).toBeTruthy();
+  });
+
 });

@@ -11,13 +11,13 @@ describe('ProductsDetailComponent', () => {
       declarations: [ProductsDetailComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(ProductsDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debe Crearse el componente', () => {
     expect(component).toBeTruthy();
   });
 });
