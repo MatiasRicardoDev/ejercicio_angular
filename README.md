@@ -1,27 +1,44 @@
-# EjercicioAngular
+# Ejercicio de Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+## Pruebas
 
-## Development server
+Para poder ejecutar las pruebas debemos ejecutar el comando `ng test`, el cual ejecutará los archivos *.spec.ts*, donde están definidas las pruebas utilizando el framework **Jasmine**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Los casos de pruebas son los siguientes:
 
-## Code scaffolding
+### **Formulario de login**
+- Validación de Creación del componente.
+- Validación de Campos Email y Password.
+- Validación de conexión con el servicio de login.
+- Validación de la redirección en caso correcto de autenticación.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### **Página de login**
+- Validación de Creación del componente.
+- Validación de muestra del Formulario de login.
 
-## Build
+### **Servicio de login**
+- Validación de Creación del servicio.
+- Validación de la funcionalidad de las funciones Login y Logout.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### **Guard de login**
+- Validación de Creación del Guard.
 
-## Running unit tests
+### **Interceptor de login**
+- Validación de Creación del interceptor.
+- Validación de funcionalidad validando el Email y Password dummy.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### **Página de Productos**
+- Validación de Creación del componente.
+- Validación de conexión con el servicio de productos.
+- Validación de obtención de productos.
 
-## Running end-to-end tests
+### **Detalle del Producto**
+- Validación de Creación del componente.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### **Lista de Productos**
+- Validación de Creación del componente.
+- Validación de muestra de los productos en la tabla.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### **Servicio de Productos**
+- Validación de Creación del servicio.
+- Validación de la función para obtener los productos desde la API.
