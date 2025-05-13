@@ -1,0 +1,39 @@
+<div class="alert alert-danger text-center" *ngIf="credentialsError">
+  <p>Las credenciales ingresadas son invalidas</p>
+</div>
+
+<div class="card mx-auto" style="width: 40%;">
+  <div >
+    <div class="p-4">
+      <div class="d-flex justify-content-center">
+        <img src="https://cdn.pixabay.com/photo/2013/07/13/11/43/tux-158547_640.png" class="rounded-circle" alt="Avatar" width="150" height="150">
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-3">
+        <div class="mb-3">
+          <input type="email" formControlName="email" class="form-control" placeholder="Email">
+          <div *ngIf="form.get('email')?.invalid && (form.get('email')?.touched || form.get('email')?.dirty)" class="text-danger">
+            <small *ngIf="form.get('email')?.errors?.['required']">Email is required</small>
+            <small *ngIf="form.get('email')?.errors?.['email']">Invalid email format</small>
+
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="password" formControlName="password" class="form-control" placeholder="Password">
+          <div *ngIf="form.get('password')?.invalid && (form.get('password')?.touched || form.get('password')?.dirty)" class="text-danger">
+            <small *ngIf="form.get('password')?.errors?.['required']">Password is required</small>
+            <small *ngIf="form.get('password')?.errors?.['minlength']">Password must be at least 6 characters long</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success text-center" >Login</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="text-center p-3">
+      <p>user: <strong>user&#64;demo.com</strong>  pass: <strong>123456</strong></p>
+    </div>
+  </div>
+
+</div>

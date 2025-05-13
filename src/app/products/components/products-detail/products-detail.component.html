@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <p class="modal-title">{{product.title}}</p>
+  <button type="button" class="btn-close btn btn-success" aria-label="Close" (click)="modal.dismiss()"></button>
+</div>
+<div class="modal-body">
+  <div class="text-center mb-4">
+    <img [src]="product.image" alt="{{ product.title }}" width="200px" class="img-fluid">
+  </div>
+  <p class="text-center mb-4">{{ product.category }}</p>
+  <p class="text-justify mb-4" > {{ product.description }}</p>
+  <div class="d-flex justify-content-between w-100">
+    <span>Price</span>
+    <span>${{product.price}}</span>
+  </div>
+</div>

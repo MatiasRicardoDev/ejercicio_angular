@@ -1,0 +1,38 @@
+<div class="mb-4">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="full-width-table">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef style="width: 50px;"> ID </th>
+        <td mat-cell *matCellDef="let element" style="width: 50px;"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef style="width: 150px;"> Category </th>
+        <td mat-cell *matCellDef="let element" style="width: 150px;"> {{element.category}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef style="width: 150px;"> Price </th>
+        <td mat-cell *matCellDef="let element" style="width: 150px;"> {{element.price}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef style="width: 100px;">  </th>
+        <td mat-cell *matCellDef="let element" style="width: 100px;">
+          <button class="btn btn-success" (click)="openDetailModal(element)" >Open</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+  </div>
+</div>
+
